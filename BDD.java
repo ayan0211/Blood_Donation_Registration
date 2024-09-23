@@ -116,7 +116,3 @@ class Volunteer
 
 
 
-
-public class BDD {
-    
-}
