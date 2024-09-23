@@ -107,6 +107,9 @@ class Volunteer
        set_bloodgroup(BG);
    }
 }
+public class BDD {
+    
+}
 
 
 
