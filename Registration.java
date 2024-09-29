@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Volunteer
+class Registration
 {
    private String name,email,bloodgroup;
    private int rollno,age,weight;
@@ -33,7 +33,7 @@ class Volunteer
        this.age = age;
    }
    public int get_age()
-   {class
+   {
        return this.age;
    }
    public void set_mobile(long mob)
@@ -53,7 +53,7 @@ class Volunteer
        return this.bloodgroup;
    }
    public void set_weight(int w)
-   {class
+   {
        this.weight = w;
    }
    public int get_weight()
@@ -107,9 +107,7 @@ class Volunteer
        set_bloodgroup(BG);
    }
 }
-public class BDD {
-    
-}
+
 
 
 
