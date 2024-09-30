@@ -60,7 +60,7 @@ class Registration
    {
        return this.weight;
    }
-   public void input()
+   public void personal_details()
    {
        Scanner sc = new Scanner(System.in);
        System.out.println("\t\t\t\tWELCOME TO OUR BLOOD DONATION DRIVE!");
