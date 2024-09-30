@@ -5,7 +5,7 @@ class Health_check extends Registration
     public String ld,sym,all,va,me;
     public void last_donation()
     {
-        System.out.print("Have you donated blood earlier?(y/n): ");
+        System.out.print("Have you donated blood earlier within last 6 months(y/n): ");
         ld = sc.nextLine();
         while(!ld.equals("y") && !ld.equals("n"))
         {
