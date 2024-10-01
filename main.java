@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class main 
 {
     public static void main(String[] args) 
@@ -5,6 +6,8 @@ public class main
         Registration user = new Registration();
         user.personal_details();
         R_check user_check = new R_check(user);
+        Scanner sc = new Scanner(System.in);
+        String slot_confirm;
         if(user_check.flag==0 && user_check.proceed.equals("y"))
         {
             Health_check hc = new Health_check();
@@ -34,6 +37,14 @@ public class main
             {
                 hd.medication();
             }
+        }
+        System.out.print("Book a slot?(y/n): ");
+        slot_confirm = sc.nextLine();
+        if(slot_confirm.equals("y"))
+        {
+            Book_Slot bs = new Book_Slot();
+            bs.display_slots();
+            bs.book();
         }
     }
 }
