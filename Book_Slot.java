@@ -58,16 +58,13 @@ class Book_Slot
         try
         {
             BufferedReader br = new BufferedReader(new FileReader("temp.txt"));
-            FileWriter fw = new FileWriter("slots.txt");
-            fw.write("");
-            fw.close();
-            FileWriter aw = new FileWriter("slots.txt",true);
+            FileWriter aw = new FileWriter("slots.txt");
             String line;
             while((line=br.readLine())!=null)
             {
-                aw.append(line+"/n");
+                aw.write(line+"\n");
             }
-            fw.close();
+            aw.close();
             br.close();
             FileWriter tw = new FileWriter("temp.txt");
             tw.write("");
@@ -93,7 +90,7 @@ class Book_Slot
         {
             FileWriter fw = new FileWriter("temp.txt",true);
             BufferedReader br = new BufferedReader(new FileReader("slots.txt"));
-            String line="";
+            String line;
             while ((line = br.readLine()) != null)
             {
                 String[] data = line.split("\\.");
