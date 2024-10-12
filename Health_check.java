@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Health_check extends Registration
+class Health_check
 {
     Scanner sc = new Scanner(System.in);
     public String ld,sym,all,va,me;

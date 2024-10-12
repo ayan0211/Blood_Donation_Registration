@@ -7,10 +7,11 @@ class R_check extends Registration
     public String proceed;
     Scanner sc = new Scanner(System.in);
     ArrayList<String> str = new ArrayList<>();
-    R_check(Registration user)
+    R_check()
     {   
-        a = user.get_age();
-        wt = user.get_weight();
+        super.personal_details();
+        a = super.get_age();
+        wt = super.get_weight();
         if(a<18)
         {
             str.add("Your age is under 18 yrs.");

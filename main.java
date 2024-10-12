@@ -11,9 +11,8 @@ public class main
         }
         else
         {
-            Registration user = new Registration();
-            user.personal_details();
-            R_check user_check = new R_check(user);
+            
+            R_check user_check = new R_check();
             Scanner sc = new Scanner(System.in);
             String slot_confirm;
             if(user_check.flag==0 && user_check.proceed.equals("y"))
