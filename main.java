@@ -4,7 +4,7 @@ public class main
 {
     public static void main(String[] args) 
     {   
-        File slot_file  = new File("C:\\Users\\Pavi Gupta\\Blood_Donation\\Blood_Donation_Registration-1\\slots.txt");
+        File slot_file  = new File("slots.txt");
         if(slot_file.length()==0)
         {
             System.out.println("Sorry! slots are not available");
