@@ -5,7 +5,7 @@ public class main
     public static void main(String[] args) 
     {   
         File slot_file  = new File("slots.txt");
-        if(slot_file.length()!=0)
+        if(slot_file.length()==0)
         {
             System.out.println("Sorry! slots are not available");
         }
@@ -44,8 +44,7 @@ public class main
                 {
                     hd.medication();
                 }
-                Registration registration = new Registration();
-                registration.personal_details();
+            
                 System.out.print("Book a slot?(y/n): ");
                 slot_confirm = sc.nextLine();
                 while(!slot_confirm.equals("y") && !slot_confirm.equals("n"))
@@ -59,6 +58,8 @@ public class main
                     bs.display_slots();
                     bs.book();
                     System.out.println("Your slot has beed successfully booked");
+                    user_check.saveDetailsToFile();
+                    hd.saveDetailsToFile();
                 }
             }
             
