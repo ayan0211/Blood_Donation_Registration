@@ -1,5 +1,8 @@
 import java.util.Arrays;
 import java.util.Scanner;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 class Registration
 {
@@ -113,5 +116,39 @@ class Registration
             BG = sc.nextLine();
         }
         set_bloodgroup(BG);
+        saveDetailsToFile();
+    }
+    public void saveDetailsToFile() {
+        try {
+            FileWriter fw = new FileWriter("registration.txt", true);  
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            
+            bw.write("Name: " + get_name());
+            bw.newLine();
+            bw.write("Email: " + get_email());
+            bw.newLine();
+            bw.write("Roll No: " + get_rollno());
+            bw.newLine();
+            bw.write("Age: " + get_age());
+            bw.newLine();
+            bw.write("Mobile: " + get_mobile());
+            bw.newLine();
+            bw.write("Weight: " + get_weight());
+            bw.newLine();
+            bw.write("Blood Group: " + get_bloodgroup());
+            bw.newLine();
+            bw.write("----------------------------");
+            bw.newLine();
+
+            bw.close();  
+            fw.close(); 
+
+            System.out.println("Registration details saved successfully!");
+        } catch (IOException e) {
+            System.out.println("An error occurred while saving registration details.");
+            e.printStackTrace();
+        }
     }
 }
+
